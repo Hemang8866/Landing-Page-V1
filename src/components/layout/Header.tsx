@@ -7,7 +7,7 @@ const Header: React.FC = () => {
       <img
         src={Images.HeaderImage}
         alt="Header Image"
-        className="flex sm:hidden aspect-auto"
+        className="flex sm:hidden aspect-auto object-cover w-full h-[500px]"
       />
       <div className="flex flex-col gap-y-16 px-40 py-24">
         <h1 className="text-defaultH leading-heading text-neutral-90 font-semibold">

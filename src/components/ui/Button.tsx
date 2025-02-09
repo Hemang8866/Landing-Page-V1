@@ -24,7 +24,8 @@ const Button: React.FC<Button> = ({
       "bg-brown-default text-neutral-5 hover:bg-brown-light active:bg-brown-dark",
     hollow:
       "border border-neutral-40 text-neutral-90 hover:bg-neutral-10 active:bg-neutral-20",
-    subtle: "bg-neutral-10 hover:bg-neutral-5 active:bg-neutral-20",
+    subtle:
+      "bg-neutral-10 hover:bg-neutral-5 active:bg-neutral-20 text-neutral-90",
   };
 
   return (

@@ -5,6 +5,8 @@ import Linkedin from "@/assets/icons/Linkedin.svg?react";
 
 const Footer: React.FC = () => {
   const socialIconClass = "flex justify-center logo-social-light w-40 h-40";
+  const currentYear = new Date().getFullYear();
+
   return (
     <footer className="flex flex-col gap-y-[36px] bg-neutral-90 p-24">
       <div className="flex flex-col gap-y-16 justify-between items-center">
@@ -30,8 +32,7 @@ const Footer: React.FC = () => {
         </div>
       </div>
       <span className="text-neutral-30 text-caption leading-caption font-normal text-center">
-        © {new Date().getFullYear()} Central Texas Fly Fishing All Rights
-        Reserved.
+        © {currentYear} Central Texas Fly Fishing All Rights Reserved.
       </span>
     </footer>
   );
