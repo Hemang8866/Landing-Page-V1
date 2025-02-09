@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+a {
+  @apply text-neutral-5 text-default leading-default font-normal py-4 cursor-pointer;
+}
+.logo-light svg path {
+  @apply fill-tan-default;
+}
+.logo-social-light svg path {
+  @apply fill-neutral-5;
+}
