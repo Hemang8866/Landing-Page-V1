@@ -3,7 +3,7 @@ import Menu from "@/assets/icons/Menu.svg?react";
 
 const Navbar: React.FC = () => {
   return (
-    <nav className="flex justify-between items-center py-8 px-24">
+    <nav className="flex justify-between items-center py-8 px-24 h-[56px]">
       <span className="flex sm:hidden">
         <Logo />
       </span>

@@ -1,12 +1,12 @@
 import Navbar from "@/components/layout/Navbar";
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import Featured from "@/components/ui/sections/Featured";
 import MemberStories from "@/components/ui/sections/MemberStories";
-import Footer from "@/components/layout/Footer";
 
 const HomePage: React.FC = () => {
   return (
-    <main className="container">
+    <main className="container font-default">
       <Navbar />
       <Header />
       <Featured />

@@ -1,6 +1,6 @@
 import React from "react";
 
-const MemberStories: React.FC = () => {
+const MemberStories = () => {
   return <div>MemberStories</div>;
 };
 
