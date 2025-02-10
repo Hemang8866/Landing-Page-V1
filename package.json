@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://hemang8866.github.io/Landing-Page-V1/",
+  "homepage": "https://hemangkoshiyar.github.io/Landing-Page-V1/",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
