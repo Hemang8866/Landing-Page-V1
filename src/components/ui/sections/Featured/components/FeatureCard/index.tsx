@@ -4,6 +4,7 @@ import Images from "@/assets/images";
 import CaretUp from "@/assets/icons/CaretUp.svg?react";
 import CaretDown from "@/assets/icons/CaretDown.svg?react";
 import Button from "@/components/ui/Button";
+import cx from "classnames";
 
 const FeatureCard: React.FC<FeatureCardItemProps> = ({
   item,
@@ -15,7 +16,7 @@ const FeatureCard: React.FC<FeatureCardItemProps> = ({
     <>
       {/* Mobile Layout */}
       <div
-        className="flex flex-col justify-between gap-y-8 p-24 min-h-[260px] bg-cover aspect-auto bg-center md:hidden"
+        className="flex flex-col justify-between gap-y-8 p-24 min-h-[260px] bg-cover aspect-auto bg-center md:hidden mix-blend-luminosity"
         style={{
           backgroundImage: `url('${Images[`${item.image}M`]}')`,
         }}
@@ -39,7 +40,7 @@ const FeatureCard: React.FC<FeatureCardItemProps> = ({
               className="w-[400px] h-[220px] flex-shrink-0"
             />
             <div className="flex flex-col p-24 gap-y-8 items-baseline">
-              <FeatureCardContent item={item} buttonSize="small" />
+              <FeatureCardContent item={item} buttonSize="small" isDesktop />
             </div>
           </div>
         )}
@@ -51,10 +52,15 @@ const FeatureCard: React.FC<FeatureCardItemProps> = ({
 const FeatureCardContent: React.FC<{
   item: FeatureCardItemProps["item"];
   buttonSize: "large" | "small";
-}> = ({ item, buttonSize }) => (
+  isDesktop?: boolean;
+}> = ({ item, buttonSize, isDesktop }) => (
   <>
     <h1 className="text-smallH font-semibold leading-heading">{item.title}</h1>
-    <p className="text-medium leading-medium font-normal text-neutral-60">
+    <p
+      className={cx("text-medium leading-medium font-normal text-neutral-60", {
+        "line-clamp-2": isDesktop,
+      })}
+    >
       {item.description}
     </p>
     <span>

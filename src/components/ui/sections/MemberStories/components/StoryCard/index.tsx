@@ -17,7 +17,7 @@ const StoryCard: React.FC<StoryCardItemProps> = ({ item }) => {
               alt={item.title}
               className="w-[100px] h-[100px] aspect-auto"
             />
-            <p className="text-default font-normal leading-default text-neutral-60">
+            <p className="text-default font-normal leading-default text-neutral-60 line-clamp-3">
               {item.description}
             </p>
           </div>
