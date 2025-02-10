@@ -21,7 +21,7 @@ const MemberStories: React.FC = () => {
       </div>
 
       {/* Desktop Layout */}
-      <div className="md:grid xl:grid-cols-2 gap-48 gap-cols-1 hidden">
+      <div className="md:grid grid-cols-2 gap-48 hidden">
         {storyCards.map((cardItem: StoryCardProps) => (
           <StoryCardWithImage key={cardItem.title} cardItem={cardItem} />
         ))}
@@ -37,9 +37,9 @@ const StoryCardWithImage: React.FC<{ cardItem: StoryCardProps }> = ({
     <img
       src={Images[cardItem.image]}
       alt={cardItem.title}
-      className="w-[200px] h-[200px] flex-shrink-0"
+      className="lg:w-[200px] lg:h-[200px] md:w-[150px] md:h-[150px] flex-shrink-0"
     />
-    <div className="flex flex-col px-24 gap-y-16 items-baseline">
+    <div className="flex flex-col px-24 lg:gap-y-16 md:gap-y-8 items-baseline">
       <StoryCardContent item={cardItem} buttonSize="small" />
     </div>
   </div>
@@ -50,10 +50,10 @@ const StoryCardContent: React.FC<{
   buttonSize: "large" | "small";
 }> = ({ item, buttonSize }) => (
   <>
-    <h1 className="text-accent font-normal font-alternate text-neutral-90 leading-accent">
+    <h1 className="lg:text-accent md:text-medium font-normal font-alternate text-neutral-90 leading-accent">
       {item.title}
     </h1>
-    <p className="text-small leading-small font-normal text-neutral-60">
+    <p className="text-small leading-small font-normal text-neutral-60 max-w-xs line-clamp-3">
       {item.description}
     </p>
     <Button variant="subtle" size={buttonSize}>
