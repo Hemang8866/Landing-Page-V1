@@ -13,8 +13,8 @@ export default {
   StoryTwoM: `${BASE_URL}assets/images/mobile/story-two.png`,
   StoryThreeM: `${BASE_URL}assets/images/mobile/story-three.png`,
   StoryFourM: `${BASE_URL}assets/images/mobile/story-four.png`,
-  StoryOne: `${BASE_URL}assets/images/story-one.png`,
-  StoryTwo: `${BASE_URL}assets/images/story-two.png`,
-  StoryThree: `${BASE_URL}assets/images/story-three.png`,
-  StoryFour: `${BASE_URL}assets/images/story-four.png`,
+  StoryOne: `${BASE_URL}assets/images/story-one.jpeg`,
+  StoryTwo: `${BASE_URL}assets/images/story-two.jpeg`,
+  StoryThree: `${BASE_URL}assets/images/story-three.jpeg`,
+  StoryFour: `${BASE_URL}assets/images/story-four.jpeg`,
 } as Record<string, string>;

@@ -11,7 +11,6 @@ const FeatureCard: React.FC<FeatureCardItemProps> = ({
   openCard,
 }) => {
   const isCardOpen = openCard[item.title];
-
   return (
     <>
       {/* Mobile Layout */}
