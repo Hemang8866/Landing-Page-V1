@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
   };
 
   return (
-    <nav className="flex justify-between items-center py-8 px-24 md:px-80 h-[56px]">
+    <nav className="lg:container lg:mx-auto flex justify-between items-center py-8 px-24 xl:px-80 h-[56px]">
       <span className="flex md:hidden">
         <LogoMobile />
       </span>
@@ -38,7 +38,7 @@ const Navbar: React.FC = () => {
             key={navItem.url}
             onClick={() => changeTab(navItem.name)}
             className={cx(
-              "py-2 border-b-2 w-max border-b-transparent text-default font-normal leading-default text-neutral-90 font-default cursor-pointer transition-all duration-150",
+              "py-2 border-b-2 w-max border-b-transparent text-default font-normal leading-default text-neutral-90 font-default cursor-pointer transition-all duration-150 hover:border-b-2 hover:border-b-neutral-90",
               {
                 "border-b-2 !border-b-neutral-90": activeTab === navItem.name,
               }

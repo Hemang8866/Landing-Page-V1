@@ -1,10 +1,9 @@
 import React from "react";
 import { StoryCardItemProps } from "./types";
 import Images from "@/assets/images";
+import Button from "@/components/ui/Button";
 
 const StoryCard: React.FC<StoryCardItemProps> = ({ item }) => {
-  /*@ts-expect-error for this line*/
-  const imageSrc = Images[item.image];
   return (
     <>
       <div className="flex flex-col gap-y-16 justify-between">
@@ -14,7 +13,7 @@ const StoryCard: React.FC<StoryCardItemProps> = ({ item }) => {
           </h1>
           <div className="flex gap-x-16">
             <img
-              src={imageSrc}
+              src={Images[`${item.image}M`]}
               alt={item.title}
               className="w-[100px] h-[100px] aspect-auto"
             />
@@ -23,7 +22,11 @@ const StoryCard: React.FC<StoryCardItemProps> = ({ item }) => {
             </p>
           </div>
         </div>
-        <span>{item.readMore}</span>
+        <span>
+          <Button variant="hollow" size="large">
+            Read more
+          </Button>
+        </span>
       </div>
       <hr className="border-t-2 border-t-neutral-20" />
     </>

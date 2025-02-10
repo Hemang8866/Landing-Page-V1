@@ -11,37 +11,39 @@ const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="flex flex-col gap-y-[36px] bg-neutral-90 p-24">
-      <div className="flex flex-col gap-y-16 justify-between items-center">
-        <span className="logo-light">
-          <Logo />
-        </span>
-        <div className="flex gap-x-24 items-center">
-          {footerNav.map((navItem: NavItem) => (
-            <a
-              href={`#${navItem.url.replace("/", "")}`}
-              key={navItem.url}
-              className="footer-links"
-            >
-              {navItem.name}
+    <footer className="bg-neutral-90">
+      <div className="container mx-auto flex flex-col gap-y-[36px] p-24">
+        <div className="flex flex-col gap-y-16 justify-between items-center">
+          <span className="logo-light">
+            <Logo />
+          </span>
+          <div className="flex gap-x-24 items-center">
+            {footerNav.map((navItem: NavItem) => (
+              <a
+                href={`#${navItem.url.replace("/", "")}`}
+                key={navItem.url}
+                className="footer-links"
+              >
+                {navItem.name}
+              </a>
+            ))}
+          </div>
+          <div className="flex gap-x-8 items-center">
+            <a href="#" className={socialIconClass}>
+              <Facebook />
             </a>
-          ))}
+            <a href="#" className={socialIconClass}>
+              <Instagram />
+            </a>
+            <a href="#" className={socialIconClass}>
+              <Linkedin />
+            </a>
+          </div>
         </div>
-        <div className="flex gap-x-8 items-center">
-          <a href="#" className={socialIconClass}>
-            <Facebook />
-          </a>
-          <a href="#" className={socialIconClass}>
-            <Instagram />
-          </a>
-          <a href="#" className={socialIconClass}>
-            <Linkedin />
-          </a>
-        </div>
+        <span className="text-neutral-30 text-caption leading-caption font-normal text-center">
+          © {currentYear} Central Texas Fly Fishing All Rights Reserved.
+        </span>
       </div>
-      <span className="text-neutral-30 text-caption leading-caption font-normal text-center">
-        © {currentYear} Central Texas Fly Fishing All Rights Reserved.
-      </span>
     </footer>
   );
 };
