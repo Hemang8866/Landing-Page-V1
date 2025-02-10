@@ -6,7 +6,7 @@ import MemberStories from "@/components/ui/sections/MemberStories";
 
 const HomePage: React.FC = () => {
   return (
-    <main className="container font-default">
+    <main className="font-default">
       <Navbar />
       <Header />
       <Featured />

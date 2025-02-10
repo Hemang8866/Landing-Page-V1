@@ -22,6 +22,7 @@ export default {
         smallH: tokens.heading.small.fontSize,
         small: tokens.body.small.fontSize,
         caption: tokens.body.caption.fontSize,
+        accent: tokens.accent.fontSize,
       },
       fontFamily: {
         default: [tokens.body.default.fontFamily],
@@ -38,6 +39,7 @@ export default {
         medium: tokens.body.medium.lineHeight,
         small: tokens.body.small.lineHeight,
         caption: tokens.body.caption.lineHeight,
+        accent: tokens.accent.lineHeight,
       },
       screens: {
         xs: tokens.xs,

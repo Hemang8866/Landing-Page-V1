@@ -40,7 +40,7 @@ const Featured: React.FC = () => {
     },
   ];
   return (
-    <section className="flex flex-col gap-y-24 bg-tan-lighter px-40 py-24">
+    <section className="flex flex-col gap-y-24 bg-tan-lighter py-40 px-24">
       <h1 className="text-defaultH leading-heading text-neutral-90 font-semibold">
         Featured options
       </h1>

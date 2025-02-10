@@ -2,8 +2,11 @@ import Logo from "@/assets/icons/Logo.svg?react";
 import Facebook from "@/assets/icons/Facebook.svg?react";
 import Instagram from "@/assets/icons/Instagram.svg?react";
 import Linkedin from "@/assets/icons/Linkedin.svg?react";
+import { navContent } from "@/utils/links";
+import { NavItem } from "@/types";
 
 const Footer: React.FC = () => {
+  const { footerNav } = navContent;
   const socialIconClass = "flex justify-center logo-social-light w-40 h-40";
   const currentYear = new Date().getFullYear();
 
@@ -14,10 +17,15 @@ const Footer: React.FC = () => {
           <Logo />
         </span>
         <div className="flex gap-x-24 items-center">
-          <a href="#">FAQ</a>
-          <a href="#">Privacy</a>
-          <a href="#">Support</a>
-          <a href="#">Contact</a>
+          {footerNav.map((navItem: NavItem) => (
+            <a
+              href={`#${navItem.url.replace("/", "")}`}
+              key={navItem.url}
+              className="footer-links"
+            >
+              {navItem.name}
+            </a>
+          ))}
         </div>
         <div className="flex gap-x-8 items-center">
           <a href="#" className={socialIconClass}>

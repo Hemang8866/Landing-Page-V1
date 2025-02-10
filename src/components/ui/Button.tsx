@@ -2,7 +2,7 @@ import React from "react";
 
 interface Button {
   children: React.ReactNode;
-  variant?: "primary" | "hollow" | "subtle";
+  variant?: "primary" | "hollow" | "subtle" | "icon";
   size?: "large" | "small";
   onClick?: () => void;
 }
@@ -26,6 +26,7 @@ const Button: React.FC<Button> = ({
       "border border-neutral-40 text-neutral-90 hover:bg-neutral-10 active:bg-neutral-20",
     subtle:
       "bg-neutral-10 hover:bg-neutral-5 active:bg-neutral-20 text-neutral-90",
+    icon: "bg-transparent hover:bg-neutral-10 active:bg-neutral-20 focus:!bg-transparent focus:!ring-offset-0",
   };
 
   return (

@@ -3,13 +3,13 @@ import Images from "@/assets/images";
 
 const Header: React.FC = () => {
   return (
-    <header className="flex flex-col gap-y-24 sm:flex-row-reverse">
+    <header className="flex flex-col lg:flex-row-reverse">
       <img
         src={Images.HeaderImage}
         alt="Header Image"
-        className="flex sm:hidden aspect-auto object-cover w-full h-[500px]"
+        className="flex md:hidden aspect-auto object-cover h-[500px]"
       />
-      <div className="flex flex-col gap-y-16 px-40 py-24">
+      <div className="flex flex-col gap-y-16 py-40 px-24">
         <h1 className="text-defaultH leading-heading text-neutral-90 font-semibold">
           Central Texas Fly Fishing
         </h1>
@@ -17,12 +17,12 @@ const Header: React.FC = () => {
           At lacus vitae nulla sagittis scelerisque nisl. Pellentesque duis
           cursus vestibulum, facilisi ac, sed faucibus.
         </span>
+        <span>
+          <Button size="large" variant="primary">
+            Get started
+          </Button>
+        </span>
       </div>
-      <span className="px-40 pb-32">
-        <Button size="large" variant="primary">
-          Get started
-        </Button>
-      </span>
     </header>
   );
 };

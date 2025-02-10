@@ -5,9 +5,9 @@ import Images from "@/assets/images";
 const FeatureCard: React.FC<FeatureCardItemProps> = ({ item }) => {
   return (
     <div
-      className="flex flex-col justify-between gap-y-8 p-24 h-[260px] bg-cover aspect-auto"
+      className="flex flex-col justify-between gap-y-8 p-24 min-h-[260px] bg-cover aspect-auto bg-center mix-blend-luminosity"
       style={{
-        //@ts-ignore
+        //@ts-expect-error for this line
         backgroundImage: `url('${Images[item.image]}')`,
       }}
     >
