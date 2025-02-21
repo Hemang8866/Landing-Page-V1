@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
 
   return (
     <footer className="bg-neutral-90">
-      <div className="lg:container lg:mx-auto flex flex-col gap-y-36 p-24">
+      <div className="lg:container lg:mx-auto flex flex-col gap-y-36 p-24 md:px-24 xl:px-80">
         <div className="flex flex-col md:flex-row justify-between items-center gap-y-16">
           <div className="flex flex-col md:flex-row items-center gap-x-24 gap-y-16 md:gap-y-0">
             <span className="logo-light">
